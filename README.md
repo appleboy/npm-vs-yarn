@@ -60,4 +60,4 @@ Yarn is so faster than npm. We can move package manager from Npm to Yarn for Jav
 |                       | npm    | yarn    |
 |-----------------------|--------|---------|
 | install without cache | 93.00s | 42.80s  |
-| install with cacche   | 13.00s | `0.16s` |
+| install with cache   | 13.00s | `0.16s` |
