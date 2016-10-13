@@ -28,25 +28,36 @@ $ npm cache clean
 $ npm install
 ```
 
-Result: 
+Result: `93.00s`
 
 ```
 $ yarn cache clean
 $ yarn install
 ```
 
-Result: 42.80s
+Result: `42.80s`
 
 ## Testing with cache
+
+Testing install speed with cache `node_modules` folder.
 
 ```
 $ npm install
 ```
 
-Result: 
+Result: `13.00s`
 
 ```
 $ yarn install
 ```
 
-Result: 0.16s
+Result: `0.16s`
+
+## Conclusion
+
+Yarn is so faster than npm. We can move package manager from Npm to Yarn for JavaScript now.
+
+|                       | npm    | yarn    |
+|-----------------------|--------|---------|
+| install without cache | 93.00s | 42.80s  |
+| install with cacche   | 13.00s | `0.16s` |
