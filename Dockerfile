@@ -1,4 +1,4 @@
-FROM node:6.7.0
+FROM node:7.0.0
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash && \
   echo "" >> ~/.bashrc && \
