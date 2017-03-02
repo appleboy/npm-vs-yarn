@@ -1,6 +1,6 @@
 FROM node:latest
 
-ENV YARN_VERSION 0.18.1
+ENV YARN_VERSION 0.21.3
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION && \
   echo "" >> ~/.bashrc && \
