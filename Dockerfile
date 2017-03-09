@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:7.7.1
 
 ENV YARN_VERSION 0.21.3
 
