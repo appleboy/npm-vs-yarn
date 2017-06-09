@@ -29,18 +29,14 @@ $ rm -rf ~/.npm/_cacache/
 $ time npm install
 ```
 
-> real    1m43.370s
-> user    0m50.298s
-> sys     0m17.945s
+time: `1m43.370s`
 
 ```
 $ yarn cache clean
 $ time yarn install
 ```
 
-real    1m1.707s
-user    0m45.594s
-sys     0m18.121s
+time: `1m1.707s`
 
 ## Testing with cache
 
@@ -51,18 +47,14 @@ $ rm -rf node_moduels
 $ time npm install
 ```
 
-real    0m38.819s
-user    0m28.780s
-sys     0m11.605s
+time: `0m38.819s`
 
 ```
 $ rm -rf node_moduels
 $ time yarn install
 ```
 
-real    0m24.219s
-user    0m21.591s
-sys     0m11.321s
+time: `0m24.219s`
 
 Testing install speed **with** cache `node_modules` folder.
 
@@ -70,17 +62,13 @@ Testing install speed **with** cache `node_modules` folder.
 $ time npm install
 ```
 
-real    0m11.216s
-user    0m10.992s
-sys     0m0.670s
+time: `0m11.216s`
 
 ```
 $ time yarn install
 ```
 
-real    0m0.954s
-user    0m0.997s
-sys     0m0.118s
+time: `0m0.954s`
 
 ## Conclusion
 
