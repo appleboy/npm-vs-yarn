@@ -29,9 +29,9 @@ $ rm -rf ~/.npm/_cacache/
 $ time npm install
 ```
 
-real    1m43.370s
-user    0m50.298s
-sys     0m17.945s
+> real    1m43.370s
+> user    0m50.298s
+> sys     0m17.945s
 
 ```
 $ yarn cache clean
