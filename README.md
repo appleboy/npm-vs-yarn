@@ -43,14 +43,14 @@ time: `1m1.707s`
 Testing install speed **without** include cache `node_modules` folder.
 
 ```
-$ rm -rf node_moduels
+$ rm -rf node_modules
 $ time npm install
 ```
 
 time: `0m38.819s`
 
 ```
-$ rm -rf node_moduels
+$ rm -rf node_modules
 $ time yarn install
 ```
 
