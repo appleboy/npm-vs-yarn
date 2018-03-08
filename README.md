@@ -15,28 +15,36 @@ Yarn is a new package manager for JavaScript. Please read [blog post][3] from [F
 
 You can testing in Docker or what you prefer.
 
-* node version: `v8.0.0`
-* npm verison: `5.0.0`
-* yarn verison: `0.24.6`
+* node version: `v9.7.1`
+* npm verison: `5.7.1`
+* yarn verison: `1.5.1`
 
 ## Testing without cache
 
 Testing install speed without cache `node_modules` folder.
 
 ```
-$ npm cache verify
 $ rm -rf ~/.npm/_cacache/
 $ time npm install
 ```
 
-time: `1m43.370s`
+time: `1m1.009s`
+
+Try [npm ci](https://docs.npmjs.com/cli/ci) command
+
+```
+$ rm -rf ~/.npm/_cacache/
+$ time npm ci
+```
+
+time: `1m0.268s`
 
 ```
 $ yarn cache clean
 $ time yarn install
 ```
 
-time: `1m1.707s`
+time: `0m46.044s`
 
 ## Testing with cache
 
@@ -47,14 +55,23 @@ $ rm -rf node_modules
 $ time npm install
 ```
 
-time: `0m38.819s`
+time: `0m58.567s`
+
+Try [npm ci](https://docs.npmjs.com/cli/ci) command
+
+```
+$ rm -rf node_modules
+$ time npm ci
+```
+
+time: `0m43.004s`
 
 ```
 $ rm -rf node_modules
 $ time yarn install
 ```
 
-time: `0m24.219s`
+time: `0m36.384s`
 
 Testing install speed **with** cache `node_modules` folder.
 
@@ -62,19 +79,28 @@ Testing install speed **with** cache `node_modules` folder.
 $ time npm install
 ```
 
-time: `0m11.216s`
+time: `0m10.964s`
+
+```
+$ time npm ci
+```
+
+time: `0m46.317s`
 
 ```
 $ time yarn install
 ```
 
-time: `0m0.954s`
+time: `0m1.601s`
 
 ## Conclusion
 
+Date: 2018-03-08
+
 Yarn is so faster than npm. We can move package manager from Npm to Yarn for JavaScript now.
 
-|                       | npm    | yarn    |
-|-----------------------|--------|---------|
-| install without cache | 103.00s| 61.70s  |
-| install with cache    | 11.00s | `0.9s`  |
+|                                              | npm install   | npm ci  | yarn | 
+|----------------------------------------------|---------------|---------|------|
+| install without cache (without node_modules) | 61s           | 60s     | 46s|
+| install with cache (without node_modules)    | 58s           | 43s     | 36s|
+| install with cache (with node_modules)       | 10s           | 46s     | `2s`|
