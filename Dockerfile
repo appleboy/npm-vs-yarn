@@ -1,3 +1,7 @@
-FROM node:8.0.0
+FROM node:10.11.0
+
+RUN mkdir /usr/src/benchmark
+
+COPY . /usr/src/benchmark
 
 CMD /bin/bash
