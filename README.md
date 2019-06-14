@@ -101,7 +101,7 @@ Yarn is faster than npm. We can move package manager from Npm to Yarn for JavaSc
 
 |                                              | npm install   | npm ci  | yarn | 
 |----------------------------------------------|---------------|---------|------|
-| install without cache (without node_modules) | 3m            | 3m      | 1ms  |
+| install without cache (without node_modules) | 3m            | 3m      | 1m   |
 | install with cache (without node_modules)    | 1m            | 18s     | 30s  |
 | install with cache (with node_modules)       | 54s           | 21s     | 2s   |
 | install without internet (with node_modules) | -             | -       | 2s   |
